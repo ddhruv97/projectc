@@ -1,8 +1,8 @@
 <html>
 <body>
 Name:
-<?php echo $_GET["contactname"]; ?><br>
+<?php echo $_POST["contactname"]; ?><br>
 Major:
-<?php echo $_GET["major"]; ?><br>
+<?php echo $_POST["major"]; ?><br>
 <body>
 </html>
