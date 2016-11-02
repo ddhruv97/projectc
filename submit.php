@@ -25,6 +25,7 @@ if ($link->connect_error) {
 }
 
 ?>
+<br>
 <a href = "index.html">Home Page</a>
 <br>
 <a href = "viewprojs.php">List of Projects</a>

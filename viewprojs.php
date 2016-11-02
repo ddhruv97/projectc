@@ -11,7 +11,7 @@ if ($link->connect_error) {
 	$result = $link->query($command);
 	if($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
-			echo "Name: " . $row["name"]. "Major: " . $row["major"] . "\n";
+			echo "Name: " . $row["name"]. "   , " . "Major: " . $row["major"] . "<br>";
 		}
 	}
 	else {
