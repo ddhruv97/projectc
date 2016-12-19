@@ -4,7 +4,8 @@ Name:
 <?php echo $_POST["contactname"]; ?><br>
 Major:
 <?php echo $_POST["major"]; ?><br>
-<?php echo htmlspecialchars($_POST["desc"]); ?><br>
+Project Description:
+<?php echo $_POST["project"]; ?><br>
 <?php
 $link = new mysqli(ini_get('mysql.default_host'), 
 		ini_get('mysql.default_user'),
@@ -14,10 +15,11 @@ $link = new mysqli(ini_get('mysql.default_host'),
 if ($link->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 } else {
-	$command = $link->prepare("INSERT INTO ProjTable (name, major) VALUES (?,?)");
-	$command->bind_param("ss",$name, $major);
+	$command = $link->prepare("INSERT INTO ProjTable (name, major, project) VALUES (?,?,?)");
+	$command->bind_param("sss",$name, $major, $project);
 	$name = $_POST["contactname"];
 	$major = $_POST["major"];
+	$project = $_POST["project"];
 	$command->execute();
 	$command->close();
 	$link->close();

@@ -7,11 +7,11 @@ $link = new mysqli(ini_get('mysql.default_host'),
 if ($link->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 } else {
-	$command = "SELECT name,major FROM ProjTable";
+	$command = "SELECT name,major,project FROM ProjTable";
 	$result = $link->query($command);
 	if($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
-			echo "Name: " . $row["name"]. "   , " . "Major: " . $row["major"] . "<br>";
+			echo "Name: " . $row["name"]. "   , " . "Major: " . $row["major"] . "    , Project Description: " . $row["project"] . "<br>";
 		}
 	}
 	else {
