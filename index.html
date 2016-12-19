@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+body {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Background.jpeg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.button {
+    background-color: DeepSkyBlue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.title {
+	font-family: sans-serif;
+	text-align: center;
+	font-size: 72px;
+	color: white;
+	#background-color: black;
+	#opacity: 0.5;
+	margin:auto;
+}
+.wrapper {
+	position:fixed;
+	top:50%;
+	left:50%;
+	text-align: center;
+	transform: translateX(-50%);
+	margin:auto;
+}
+p.center {
+	font-family: "Open Sans", sans-serif;
+	text-align: center;
+	color: white;
+	font-size: 24px;
+}
+</style>
 <title>Home Page</title>
 </head>
 <body>
+<div class = "title">Hack Connect</div>
 <br>
-<a href = "submission.html">Submit a new project</a><br>
-<a href = "viewprojs.php"> View List of Projects</a><br>
+<div class = "wrapper">
+<div class = "center">
+<a href = "submission.html"><button type = "button" class = "button">Submit a new project</button></a>
+<a href = "viewprojs.php"><button type = "button" class = "button"> View List of Projects</button></a><br>
+</div>
+</div>
 </body>
 </html>
